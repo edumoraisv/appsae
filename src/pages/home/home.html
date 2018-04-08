@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-left>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <span class="intro">Escolha uma disciplina para avaliar seu conhecimento:</span>
+
+  <ion-list>
+    <ion-item ng-repeat="item in items" tappable (click)="abrirDisciplina()" class="materia1">
+      Matemática
+    </ion-item>
+    <ion-item ng-repeat="item in items" tappable (click)="abrirDisciplina()" class="materia2">
+      Física
+    </ion-item>
+    <ion-item ng-repeat="item in items" tappable (click)="abrirDisciplina()" class="materia3">
+      Química
+    </ion-item>
+    <ion-item ng-repeat="item in items" tappable (click)="abrirDisciplina()" class="materia4">
+      Educação Física
+    </ion-item>
+    <ion-item ng-repeat="item in items" tappable (click)="abrirDisciplina()" class="materia5">
+      Sociologia
+    </ion-item>
+  </ion-list>
+
+</ion-content>

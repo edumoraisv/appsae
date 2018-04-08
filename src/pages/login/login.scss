@@ -1,0 +1,165 @@
+page-login {
+  .autenticacao {
+    background: url(../assets/imgs/bg-autenticacao.jpg);
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    bottom:0;
+    text-align: left;
+    padding: 16px;
+
+    img {
+      max-width: 235px;
+      height: auto;
+    }
+  }
+
+  h2 {
+    font-size: 1.70em;
+    line-height: 1.3em;
+    color: color($colors, primary);
+    word-break: normal;
+    font-weight:200;
+    margin: 45px 0px !important;
+  }
+
+  .btn {
+    margin-top: 24px;
+  }
+
+
+  // FORM
+  form {
+
+    ion-list {
+      margin-bottom: 16px!important;
+    }
+
+    ion-label {
+        &.text-break {
+            @extend %text-overflow;
+        }
+    }
+
+    .item {
+        color: inherit;
+        font-size: inherit;
+        padding-left: 0;
+        background: transparent;
+    }
+
+    .select {
+        max-width: $initial;
+    }
+
+    .select-text {
+        font-size: $font-size-text;
+        @extend %text-overflow;
+    }
+
+    .text-input {
+        font-size: $font-size-text;
+        color: color($colors, primary);
+        font-weight: $strong;
+        margin-right: 0;
+    }
+
+    .datetime-text {
+        font-size: $font-size-text;
+        font-weight: $strong;
+        color: color($colors, primary);
+    }
+
+    .select .select-placeholder {
+        color: color($colors, primary);
+        opacity: 0.7;
+        font-weight: $strong;
+        font-size: $font-size-text;
+    }
+
+    // checked
+    .toggle.toggle-checked .toggle-icon {
+        background-color: color($colors, primary);
+    }
+
+    .toggle.toggle-checked .toggle-inner {
+        background-color: color($colors, primary);
+    }
+
+    // no checked
+    .toggle-ios .toggle-icon {
+        background-color: color($colors, primary);
+    }
+
+    .toggle-ios .toggle-icon::before {
+        background: transparent;
+    }
+
+    .toggle .toggle-inner {
+        background-color: color($colors, primary);
+    }
+
+    // primeira linha do ios
+    .list-ios>.item-block:first-child {
+        border: none;
+    }
+
+    // form validação > form default
+
+    &.form-default {
+      .no-line {
+          .item-inner {
+              border-color: transparent !important;
+          }
+      }
+
+      .item.item-block .item-inner {
+          border-bottom: solid 2px color($colors, primary);
+          @extend %no-box-shadow;
+      }
+
+      .list .item-input:last-child {
+          border-bottom: color($colors, primary);
+          @extend %no-box-shadow;
+      }
+
+      .list .item-input.input-has-focus:last-child {
+          border-bottom: color($colors, primary);
+          @extend %no-box-shadow;
+      }
+
+      .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+          border-bottom-color: color($colors, primary);
+          @extend %no-box-shadow;
+      }
+
+      .item-ios.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner {
+          border-bottom-color: color($colors, primary);
+          @extend %no-box-shadow;
+      }
+
+      .item-md.item-input.input-has-focus .item-inner {
+          border-bottom-color: color($colors, primary);
+          @extend %no-box-shadow;
+      }
+
+      .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner {
+          border-bottom-color: color($colors, primary);
+          @extend %no-box-shadow;
+      }
+
+      .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child {
+          border-bottom: color($colors, primary);
+          @extend %no-box-shadow;
+      }
+
+      .item.item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+          border-bottom-color: color($colors, primary);
+          @extend %no-box-shadow;
+      }
+    }
+  }
+}

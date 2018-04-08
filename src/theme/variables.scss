@@ -1,0 +1,199 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #009ee0,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+// --------------------------------------------------
+// VAR DEFAULT
+// --------------------------------------------------
+
+$font-unimed: "UnimedSlab";
+$font-unimed-sans: "UnimedSans";
+$font-size-title: 1.9rem;
+$font-size-text: 1.4rem;
+$font-size-small: 1.2rem;
+$font-size-large: 1.8rem;
+$font-size-featured: 1.5rem;
+$padding-min: 6px 10px;
+$padding-default: 10px 12px;
+$padding-filter: 15px 10px;
+$padding-large: 0px 20px;
+$padding-medium: 25px;
+$margin-top-default: 17px;
+$padding-top-default: 20px;
+$uppercase: uppercase;
+$capitalize: capitalize;
+$initial: initial;
+$text-center: center;
+$strong: 600;
+$strong-400: 400;
+$strong-700: 700;
+$strong-800: 800;
+$strong-900: 900;
+$font-200: 200;
+$font-300: 300;
+$font-400: 400;
+$font-500: 500;
+$font-600: 600;
+$italic: italic;
+$cem-percent: 100%;
+$position-relative: relative;
+$position-absolute: absolute;
+$hidden: hidden;
+
+// --------------------------------------------------
+// MIXINS
+// --------------------------------------------------
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+       -moz-transform: $transforms;
+         -o-transform: $transforms;
+        -ms-transform: $transforms;
+            transform: $transforms;
+}
+
+@mixin absolute-center(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%,-50%));
+}
+
+@mixin box-shadow(){
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.18);
+    -moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.18);
+    box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.18);
+}
+
+@mixin box-shadow-img(){
+    -webkit-box-shadow:  0px 0px 1px 1px rgba(0,0,0,0.3);
+    -moz-box-shadow:     0px 0px 1px 1px rgba(0,0,0,0.3);
+    box-shadow:          0px 0px 1px 1px rgba(0,0,0,0.3);
+}
+
+// --------------------------------------------------
+// PLACEHOLDER
+// --------------------------------------------------
+
+%no-box-shadow {
+   -webkit-box-shadow: none;;
+       -moz-box-shadow: none;
+         -o-box-shadow: none;
+        -ms-box-shadow: none;
+            box-shadow: none;
+}
+
+%no-border-radius {
+    -webkit-border-radius: 0;;
+        -moz-border-radius: 0;
+          -o-border-radius: 0;
+         -ms-border-radius: 0;
+         border-radius: 0;
+ }
+
+%activated {
+    background: transparent;
+    @extend %no-box-shadow;
+ }
+
+%arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid color($colors, primary);
+ }
+
+%text-overflow {
+  text-overflow: $initial;
+  white-space: $initial;
+}
+
+%padding-grid {
+  padding: 0;
+}
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";

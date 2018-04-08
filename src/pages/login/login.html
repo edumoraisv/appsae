@@ -1,0 +1,28 @@
+<ion-content>
+  <div class="autenticacao">
+    <img src="./assets/imgs/logo-sae.png" alt="SAE Digital">
+    <h2>Digite seu e-mail e senha para acessar o app:</h2>
+    <form (ngSubmit)="acaoLogin()" class="form-default">
+      <ion-list>
+        <ion-item>
+          <ion-label>E-mail</ion-label>
+          <ion-input type="email"></ion-input>
+          <button ion-button clear type="button" item-right>
+              <ion-icon name="md-arrow-dropdown"></ion-icon>
+          </button>
+        </ion-item>
+        <ion-item>
+          <ion-label>Senha</ion-label>
+          <ion-input></ion-input>
+          <button ion-button clear type="button" item-right>
+            <ion-icon></ion-icon>
+          </button>
+        </ion-item>
+      </ion-list>
+      <ion-label class="esqueci-minha-senha" text-right>
+          <a>Esqueci minha senha</a>
+      </ion-label>
+      <button type="submit" class="btn" ion-button icon-right round full>Entrar</button>
+    </form>
+  </div>
+</ion-content>
